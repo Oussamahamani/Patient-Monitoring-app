@@ -1,0 +1,7 @@
+[build]
+builder = "dockerfile"
+dockerfilePath = "./HealthMonitor/Dockerfile"
+
+[deploy]
+startCommand = "dotnet HealthMonitor.dll"
+restartPolicyType = "never"

@@ -3,6 +3,8 @@ using Patient.DB;
 
 var builder = WebApplication.CreateBuilder(args);
 
+var port = Environment.GetEnvironmentVariable("PORT") ?? "8081";
+builder.WebHost.UseUrls($"http://*:{port}");
 // Add CORS policy to allow all origins, methods, and headers
 builder.Services.AddCors(options =>
 {
