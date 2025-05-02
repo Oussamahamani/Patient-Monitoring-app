@@ -40,7 +40,8 @@ const HeartRateChart = () => {
         series={[
           { data: bpmValues, label: "Heart Rate Monitor", showMark: false },
         ]}
-        sx={{ height: '100%'}}
+        height={400}
+
       />
     </div>
   );
