@@ -13,7 +13,8 @@ const Home = () => {
   const getData = async () => {
     try {
       setLoading(true);
-      const { data } = await axios.get('http://localhost:52250/patient');
+      const { data } = await axios.get('http://localhost:5250/patient');
+      console.log(data)
       setPatientData(data);
       setError(null);
     } catch (err) {
@@ -50,7 +51,7 @@ const Home = () => {
       {!loading && !error && (
         <div className={styles.homeContainer}>
           <HeartRateChart />
-          <PatientCard data={patientData} />
+          <PatientCard patientData={patientData} />
         </div>
       )}
     </div>
