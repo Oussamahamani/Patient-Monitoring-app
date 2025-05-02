@@ -6,3 +6,20 @@
     border-radius: 8px;
     background-color: #f9f9f9;
 }
+
+.bpm{
+    font-size: 2rem; 
+    font-weight: bold; 
+    text-align: center;
+    color: green ;
+    padding: 1rem;
+    margin-bottom: 1rem
+
+}
+.lastUpdated{
+    text-align: center; 
+    padding: 1rem; 
+    font-size: 0.9rem;
+    color: #666; 
+
+}
