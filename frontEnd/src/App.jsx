@@ -1,13 +1,16 @@
-import { useState } from 'react'
-import './App.css'
-import Home from './Home'
-function App() {
+import { useState } from "react";
+import "./App.css";
+import Home from "./Home";
+import NavBar from "./NavBar.jsx";
 
+function App() {
   return (
-    <>
-   <Home/>
-    </>
-  )
+    <div className="App">
+      <NavBar />
+
+      <Home />
+    </div>
+  );
 }
 
-export default App
+export default App;
