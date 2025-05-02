@@ -4,7 +4,6 @@ import styles from "./HeartRateChart.module.css"; // Assuming you have some styl
 const HeartRateChart = ({patientData}) => {
 
   const times = patientData.times.map((time) => new Date(time))
-  console.log(times)
   const bpmValues = patientData.bpmValues
 
   return (

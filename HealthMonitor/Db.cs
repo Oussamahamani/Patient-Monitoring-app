@@ -28,8 +28,7 @@ public class PatientDB
 
         for (int i = 1; i <= 20; i++)
         {
-            // int seconds = 5 * i;
-            DateTime secondsAgo = DateTime.Now - TimeSpan.FromMinutes(i);
+            DateTime secondsAgo = DateTime.Now - TimeSpan.FromSeconds(i*2);
             times.Add(secondsAgo);
             Console.WriteLine("One minute ago: " + secondsAgo);
 
