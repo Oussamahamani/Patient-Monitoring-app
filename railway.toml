@@ -1,6 +1,6 @@
 [build]
 builder = "dockerfile"
-dockerfilePath = "./HealthMonitor/Dockerfile"
+dockerfilePath = "./back-end/Dockerfile"
 
 [deploy]
 startCommand = "dotnet HealthMonitor.dll"
