@@ -1,0 +1,38 @@
+# Build results
+bin/
+obj/
+out/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# ASP.NET temporary files
+**/wwwroot/
+
+# Rider / VS Code / VS
+.vscode/
+.idea/
+*.code-workspace
+
+# Logs
+*.log
+
+# Publish folder 
+publish/
+
+# .NET Core secrets
+**/secrets.json
+
+
+# Dependency caches
+packages/
+.nuget/
+*.nupkg
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
