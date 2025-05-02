@@ -50,7 +50,7 @@ const Home = () => {
 
       {!loading && !error && (
         <div className={styles.homeContainer}>
-          <HeartRateChart />
+          <HeartRateChart patientData={patientData}/>
           <PatientCard patientData={patientData} />
         </div>
       )}
