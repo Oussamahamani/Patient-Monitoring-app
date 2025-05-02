@@ -3,7 +3,7 @@ import { LineChart } from "@mui/x-charts/LineChart";
 import styles from "./HeartRateChart.module.css"; // Assuming you have some styles in HeartRateChart.module.css
 const HeartRateChart = ({patientData}) => {
 
-  const times = patientData.times.map((time) => new Date(time)).reverse()
+  const times = patientData.times.map((time) => new Date(time))
   console.log(times)
   const bpmValues = patientData.bpmValues
 

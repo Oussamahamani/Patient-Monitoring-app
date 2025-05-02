@@ -15,6 +15,8 @@ const Home = () => {
       setLoading(true);
       const { data } = await axios.get('http://localhost:5250/patient');
       console.log(data)
+      data.times = data.times.reverse()
+    
       setPatientData(data);
       setError(null);
     } catch (err) {
@@ -26,7 +28,13 @@ const Home = () => {
   };
 
   useEffect(() => {
-    getData();
+    getData(); // Initial fetch
+  
+    const interval = setInterval(() => {
+      getData(); // Polling fetch
+    }, 5000); // Poll every 5 seconds
+  
+    return () => clearInterval(interval); // Cleanup on unmount
   }, []);
 
   return (
