@@ -1,4 +1,3 @@
-# Patient-Monitoring-app
 # 🩺 Health Monitor – Real-Time Patient Dashboard
 
 A real-time patient monitoring dashboard that displays heart rate using a .NET backend and a React frontend. This project mimics the kind of work done in hospital systems like Philips' PIIC iX — providing scalable, connected, on-prem health monitoring software.
