@@ -1,5 +1,5 @@
 using Microsoft.OpenApi.Models;
-using PizzaStore.DB;
+using Patient.DB;
 var builder = WebApplication.CreateBuilder(args);
     
 builder.Services.AddEndpointsApiExplorer();
@@ -21,10 +21,7 @@ if (app.Environment.IsDevelopment())
     
 app.MapGet("/", () => "Hello World!");
 
-app.MapGet("/pizzas/{id}", (int id) => PizzaDB.GetPizza(id));
-app.MapGet("/pizzas", () => PizzaDB.GetPizzas());
-app.MapPost("/pizzas", (Pizza pizza) => PizzaDB.CreatePizza(pizza));
-app.MapPut("/pizzas", (Pizza pizza) => PizzaDB.UpdatePizza(pizza));
-app.MapDelete("/pizzas/{id}", (int id) => PizzaDB.RemovePizza(id));
+app.MapGet("/patient", () => PatientDB.GetPatient());
+
 
 app.Run();

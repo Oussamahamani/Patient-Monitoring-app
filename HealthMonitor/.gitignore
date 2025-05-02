@@ -37,3 +37,4 @@ packages/
 Thumbs.db
 
 obj/
+test
