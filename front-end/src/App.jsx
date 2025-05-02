@@ -9,6 +9,19 @@ function App() {
       <NavBar />
 
       <Home />
+
+      <footer className="footer">
+        <br/>
+        <a
+          href="https://github.com/Oussamahamani/Patient-Monitoring-app"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="footer-link"
+        >
+          View on GitHub 
+        </a>
+        
+      </footer>
     </div>
   );
 }

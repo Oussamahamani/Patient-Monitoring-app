@@ -15,7 +15,7 @@ const Home = () => {
   const getData = async () => {
     try {
       setLoading(true);
-      const { data } = await axios.get('http://localhost:5250/patient');
+      const { data } = await axios.get('https://patient-monitoring-app-production.up.railway.app/patient');
       data.times = data.times.reverse()
       
       // in case existing data exists, we use it only last element from new data
