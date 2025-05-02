@@ -2,17 +2,17 @@ import React from 'react';
 import styles from './Home.module.css'; // Assuming you have some styles in Home.module.css
 import HeartRateChart from './HeartRateChart.jsx';
 import { Typography } from '@mui/material';
-import PatientCars from './PatientCard.jsx';
+import PatientCard from './PatientCard.jsx';
 const Home = () => {
     return (
         <div>
             
-        <div className={styles.homeContainer}>
-            <Typography variant="h5" >
+            <Typography variant="h5"sx={{p:4}} >
                 Patient DashBoard
             </Typography>
-            <PatientCars/>
+        <div className={styles.homeContainer}>
             <HeartRateChart/>
+            <PatientCard/>
         </div>
         </div>
     );

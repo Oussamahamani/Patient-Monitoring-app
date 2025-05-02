@@ -1,6 +1,6 @@
 import React from "react";
 import { LineChart } from "@mui/x-charts/LineChart";
-
+import styles from "./HeartRateChart.module.css"; // Assuming you have some styles in HeartRateChart.module.css
 const HeartRateChart = () => {
   const times = [
     "2025-05-01T23:32:00",
@@ -31,7 +31,7 @@ const HeartRateChart = () => {
   ];
 
   return (
-    <div>
+    <div className={styles.chartContainer}>
       <LineChart
         yAxis={[
           { label: "Heart Rate (BPM)", scaleType: "linear", min: 40, max: 100 },
@@ -40,7 +40,7 @@ const HeartRateChart = () => {
         series={[
           { data: bpmValues, label: "Heart Rate Monitor", showMark: false },
         ]}
-        height={300}
+        sx={{ height: '100%'}}
       />
     </div>
   );
