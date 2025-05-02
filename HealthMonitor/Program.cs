@@ -3,12 +3,12 @@ using Patient.DB;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add CORS policy
+// Add CORS policy to allow all origins, methods, and headers
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll", policy =>
     {
-        policy.AllowAnyOrigin()  // Or use .WithOrigins("https://example.com") to restrict
+        policy.AllowAnyOrigin()  
               .AllowAnyMethod()
               .AllowAnyHeader();
     });
@@ -22,7 +22,6 @@ builder.Services.AddSwaggerGen(c =>
 
 var app = builder.Build();
 
-// Use CORS before defining endpoints
 app.UseCors("AllowAll");
 
 if (app.Environment.IsDevelopment())

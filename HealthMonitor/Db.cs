@@ -10,7 +10,7 @@ public record Patient
     public string? Admission { get; set; }
     public string? Doctor { get; set; }
     public string[]? Medications { get; set; }
-    public List<DateTime> ? Times { get; set; }
+    public List<DateTime>? Times { get; set; }
     public List<int>? BPMValues { get; set; }
 
 
@@ -28,9 +28,8 @@ public class PatientDB
 
         for (int i = 1; i <= 20; i++)
         {
-            DateTime secondsAgo = DateTime.Now - TimeSpan.FromSeconds(i*2);
+            DateTime secondsAgo = DateTime.Now - TimeSpan.FromSeconds(i);
             times.Add(secondsAgo);
-            Console.WriteLine("One minute ago: " + secondsAgo);
 
             int randomBPM = random.Next(70, 80);
             bpmValues.Add(randomBPM);
@@ -49,8 +48,8 @@ public class PatientDB
             Admission = "2025-04-28",
             Doctor = "Dr. Sarah Chen",
             Medications = medications,
-            Times= times,
-            BPMValues=bpmValues,
+            Times = times,
+            BPMValues = bpmValues,
 
         };
         return patient;
